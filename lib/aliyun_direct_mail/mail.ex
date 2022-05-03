@@ -12,7 +12,7 @@ defmodule AliyunDirectMail.Mail do
 
     params = [
       Action: "SingleSendMail",
-      ReplyToAddress: Keyword.get(opts, :reply_to_address, true),
+      ReplyToAddress: Keyword.get(opts, :reply_to_address, false),
       AddressType: Keyword.get(opts, :address_type, 0),
       FromAlias: Keyword.get(opts, :from_alias, from_alias),
       TextBody: Keyword.get(opts, :text_body, ""),
